@@ -33,22 +33,19 @@
   prepare: [
     {
       path: "@semantic-release/npm",
-      npmPublish: false,
-      tarballDir: "dist"
+      npmPublish: false
     }
   ],
   verifyConditions: [
     {
       path: "@semantic-release/gitlab",
-      npmPublish: false,
-      tarballDir: "dist"
+      npmPublish: false
     }
   ],
   publish: [
     {
       path: "@semantic-release/gitlab",
-      npmPublish: false,
-      tarballDir: "dist"
+      npmPublish: false
     }
   ],
   analyzeCommits: {
