@@ -1,0 +1,19 @@
+{
+  "name": "semantic-release",
+  "version": "1.0.0",
+  "description": "automatic semantic release",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/halimarm/semantic-release.git"
+  },
+  "author": "halimarm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/halimarm/semantic-release/issues"
+  },
+  "homepage": "https://gitlab.com/halimarm/semantic-release#readme"
+}

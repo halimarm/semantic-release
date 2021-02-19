@@ -1,0 +1,48 @@
+{
+  "branches": ["master"],
+  "prepare": [
+    {
+      "path": "@semantic-release/npm",
+      "npmPublish": false,
+      "tarballDir": "dist"
+    }
+  ],
+  "verifyConditions": [
+    {
+      "path": "@semantic-release/gitlab",
+      "npmPublish": false,
+      "tarballDir": "dist"
+    }
+  ],
+  "publish": [
+    {
+      "path": "@semantic-release/gitlab",
+      "npmPublish": false,
+      "tarballDir": "dist"
+    },
+  ],
+  "analyzeCommits": {
+    "releaseRules": [
+      {
+        "type": "docs",
+        "scope": "README",
+        "release": "patch"
+      },
+      {
+        "type": "refactor",
+        "release": "patch"
+      },
+      {
+        "type": "style",
+        "release": "patch"
+      }
+    ],
+    "parserOpts": {
+      "noteKeywords": [
+        "BREAKING CHANGE",
+        "BREAKING CHANGES",
+        "BREAKING"
+      ]
+    }
+  }
+}
