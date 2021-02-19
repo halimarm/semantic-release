@@ -1,3 +1,5 @@
+## [1.2.4](https://gitlab.com/halimarm/semantic-release/compare/v1.2.3...v1.2.4) (2021-02-19)
+
 ## [1.2.3](https://gitlab.com/halimarm/semantic-release/compare/v1.2.2...v1.2.3) (2021-02-19)
 
 
