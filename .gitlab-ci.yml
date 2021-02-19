@@ -8,7 +8,7 @@ semantic_release:
       GITLAB_TOKEN: $GITLAB_TOKEN
   before_script:
       - npm install -g semantic-release @semantic-release/gitlab-config
-      - npm install @semantic-release/changelog @semantic-release/git @semantic-release/release-notes-generator @semantic-release/commit-analyzer @semantic-release/npm
+      - npm install @semantic-release/changelog @semantic-release/git @semantic-release/release-notes-generator @semantic-release/commit-analyzer @semantic-release/npm @semantic-release/gitlab
   script:
       - semantic-release -e @semantic-release/gitlab-config
   only:
