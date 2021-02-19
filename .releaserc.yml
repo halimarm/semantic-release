@@ -1,44 +1,69 @@
 {
-  "branches": ["master"],
-  "prepare": [
+  branches: [
     {
-      "path": "@semantic-release/npm",
-      "npmPublish": false,
-      "tarballDir": "dist"
-    }
-  ],
-  "verifyConditions": [
-    {
-      "path": "@semantic-release/gitlab",
-      "npmPublish": false,
-      "tarballDir": "dist"
-    }
-  ],
-  "publish": [
-    {
-      "path": "@semantic-release/gitlab",
-      "npmPublish": false,
-      "tarballDir": "dist"
+      name: 'master'
     },
+    {
+      name: 'pre/rc', 
+      channel: 'pre/rc', 
+      prerelease: 'rc'
+    },
+    {
+      name: 'beta', 
+      channel: 'beta', 
+      prerelease: 'beta'
+    }
   ],
-  "analyzeCommits": {
-    "releaseRules": [
+  plugins: [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/npm"
+  ],
+  prepare: [
+    {
+      path: "@semantic-release/npm",
+      npmPublish: false,
+      tarballDir: "dist"
+    },
+    {
+      path: "@semantic-release/changelog",
+      npmPublish: false,
+      changelogFile: "CHANGELOG.md"
+    }
+  ],
+  verifyConditions: [
+    {
+      path: "@semantic-release/gitlab",
+      npmPublish: false,
+      tarballDir: "dist"
+    }
+  ],
+  publish: [
+    {
+      path: "@semantic-release/gitlab",
+      npmPublish: false,
+      tarballDir: "dist"
+    }
+  ],
+  analyzeCommits: {
+    releaseRules: [
       {
-        "type": "docs",
-        "scope": "README",
-        "release": "patch"
+        type: "docs",
+        scope: "README",
+        release: "patch"
       },
       {
-        "type": "refactor",
-        "release": "patch"
+        type: "refactor",
+        release: "patch"
       },
       {
-        "type": "style",
-        "release": "patch"
+        type: "style",
+        release: "patch"
       }
     ],
-    "parserOpts": {
-      "noteKeywords": [
+    parserOpts: {
+      noteKeywords: [
         "BREAKING CHANGE",
         "BREAKING CHANGES",
         "BREAKING"

@@ -3,11 +3,12 @@ stages:
 
 semantic_release:
   stage: tag
-  image: node:latest
+  image: node:12
   variables:
       GITLAB_TOKEN: $GITLAB_TOKEN
   before_script:
       - npm install -g semantic-release @semantic-release/gitlab-config
+      - npm install @semantic-release/changelog
   script:
       - semantic-release -e @semantic-release/gitlab-config
   only:
