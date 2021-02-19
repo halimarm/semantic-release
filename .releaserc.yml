@@ -32,24 +32,6 @@
       }
     ]
   ],
-  prepare: [
-    {
-      path: "@semantic-release/npm",
-      npmPublish: false
-    }
-  ],
-  verifyConditions: [
-    {
-      path: "@semantic-release/gitlab",
-      npmPublish: false
-    }
-  ],
-  publish: [
-    {
-      path: "@semantic-release/gitlab",
-      npmPublish: false
-    }
-  ],
   analyzeCommits: {
     releaseRules: [
       {
