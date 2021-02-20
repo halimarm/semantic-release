@@ -48,6 +48,7 @@
       {tag: 'FEATURE', release: 'minor'},
       {tag: 'SECURITY', release: 'patch'},
       {tag: 'Breaking', release: 'major'},
+      {tag: 'breaking', release: 'major'},
       {tag: 'Fix', release: 'patch'},
       {tag: 'Update', release: 'minor'},
       {tag: 'New', release: 'minor'},
@@ -55,6 +56,15 @@
       {component: 'deps', release: 'patch'},
       {type: 'FEAT', release: 'minor'},
       {type: 'FIX', release: 'patch'},
-    ]
+      {type: "docs", release: "patch"},
+      {type: "refactor", release: "patch"},
+      {type: "style", release: "patch"}
+    ],
+    parserOpts: {
+      noteKeywords: [
+        "BREAKING CHANGE",
+        "BREAKING CHANGES"
+      ]
+    }
   }
 }
