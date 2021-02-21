@@ -1,3 +1,10 @@
+# [2.1.0](https://gitlab.com/halimarm/semantic-release/compare/v2.0.0...v2.1.0) (2021-02-21)
+
+
+### Features
+
+* add feature 4 ([9461a58](https://gitlab.com/halimarm/semantic-release/commit/9461a58ea4b04ffa913b484c31e361e1f3882d37))
+
 # [2.0.0](https://gitlab.com/halimarm/semantic-release/compare/v1.2.3...v2.0.0) (2021-02-20)
 
 
